@@ -1,0 +1,29 @@
+/* Ensure full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Root and App container should stretch properly */
+#root, .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Main content expands, pushing the footer down */
+.main-content {
+  flex-grow: 2;
+}
+
+/* Footer sits at the bottom naturally */
+.footer {
+  background-color: white;
+  color: #333;
+  padding: 3rem 1rem;
+  border-top: 1px solid #ddd;
+  
+}

@@ -1,0 +1,127 @@
+/* Styling for the search container */
+.search-container {
+    text-align: center;
+    max-width: 450px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease-in-out;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Search Heading */
+.search-container h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+/* Search Input */
+.search-container .search-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Manrope', sans-serif;
+}
+
+.search-container .search-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+/* Loader Animation */
+.search-container .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.search-container .loader {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #ddd;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.search-container .loading-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 8px;
+    font-family: 'Manrope', sans-serif;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Suggestion List */
+.search-container .suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-height: 180px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.search-container .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+.search-container .suggestion-item:hover {
+    background: #f0f3f5;
+}
+
+/* Result Cards */
+.search-container .results-container {
+    margin-top: 18px;
+    text-align: left;
+}
+
+.search-container .breed-card {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+    border-left: 4px solid #3498db;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-container .breed-card h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.search-container .breed-card ul {
+    list-style-type: disc;
+    padding-left: 18px;
+}

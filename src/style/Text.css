@@ -1,0 +1,110 @@
+/* --- Initial hidden state --- */
+.text-container {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* --- Fade in smoothly on load --- */
+.text-container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.text-container {
+    text-align: center;
+    padding: 70px 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #111;
+  }
+  
+  .glow-text {
+    color: #ff7300;
+    text-shadow: 0 0 20px rgba(255, 115, 0, 0.8);
+  }
+  
+  .sub-heading {
+    font-size: 1.4rem;
+    color: #2a62d1;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+  
+  .typewriter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111;
+    margin-top: 25px;
+    min-height: 30px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .cta-button {
+    background: linear-gradient(135deg, #ff7300, #ff9800);
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;  /* Removes underline */
+}
+
+  
+  .cta-button:hover {
+    background: linear-gradient(135deg, #ff9800, #ff7300);
+    transform: scale(1.1);
+  }
+  
+  .learn-more {
+    background: none;
+    border: 2px solid #2a62d1;
+    color: #2a62d1;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .learn-more:hover {
+    background: #2a62d1;
+    color: white;
+    transform: scale(1.1);
+  }
+  

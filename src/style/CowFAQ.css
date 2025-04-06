@@ -1,0 +1,87 @@
+/* FAQ Section */
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.faq-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* FAQ Item */
+.faq-item {
+    background: #f8f9fa; /* Light background for the items */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* FAQ Question */
+.faq-question {
+    width: 100%;
+    background: #f1f3f5; /* Light grey background */
+    color: #333; /* Dark text for readability */
+    border: none;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.faq-question:hover {
+    background: #e9ecef; /* Slightly darker grey on hover */
+}
+
+/* Toggle Icon */
+.faq-toggle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue icon for visibility */
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-toggle.open {
+    transform: rotate(180deg);
+}
+
+/* FAQ Answer with Smooth Transition */
+.faq-answer {
+    padding: 0 15px;
+    font-size: 16px;
+    color: #555;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Show Answer */
+.faq-answer.show {
+    max-height: 200px;
+    opacity: 1;
+    padding: 15px;
+}

@@ -1,0 +1,128 @@
+/* Blurred Background Overlay */
+.marketplace-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Popup Modal */
+  .marketplace-modal {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 420px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Close Button */
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+  }
+  
+  .close-button:hover {
+    color: #ff4d4d;
+  }
+  
+  /* Title */
+  .marketplace-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #482bbf;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Description */
+  .marketplace-description {
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  
+  /* Subtext */
+  .marketplace-subtext {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+  
+  /* Rocket Icon Container */
+  .rocket-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+  }
+  
+  /* Rocket Icon */
+  .rocket-icon {
+    font-size: 52px;
+    color: #ff4d4d;
+    transform: scale(1.1);
+    animation: bounce 1.5s infinite;
+  }
+  
+  /* Button */
+  .got-it-button {
+    background: linear-gradient(135deg, #5a3dc8, #482bbf);
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    letter-spacing: 0.4px;
+  }
+  
+  .got-it-button:hover {
+    background: linear-gradient(135deg, #482bbf, #351fa0);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Rocket Bounce Animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  

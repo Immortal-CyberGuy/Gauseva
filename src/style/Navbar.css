@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fa;
+}
+
+/* 🔵 NAVBAR */
+.navbar {
+    position: relative;
+    margin: 0 auto;
+    width: 95%; /* Navbar takes 95% of the screen width */
+    max-width: 1400px; /* Optional max-width to avoid it becoming too wide on larger screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0; /* Padding reduced to ensure even distribution of space */
+    background: rgba(255, 255, 255, 0.9); /* Soft Glassmorphism */
+    backdrop-filter: blur(10px); /* Subtle blur effect */
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔵 LOGO */
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+    flex: 1; /* Takes up available space on the left */
+    padding-left: 20px; /* Padding to provide spacing from the left */
+}
+
+.navbar-logo .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0a2540;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(0, 119, 255), rgb(0, 72, 212));
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 82, 212, 0.3);
+}
+
+.logo-icon {
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-link:hover {
+    color: #0077ff;
+}
+
+/* 🔵 NAV LINKS (Centering and Even Spacing) */
+.navbar-links {
+    display: flex;
+    justify-content: center; /* Centers the nav links */
+    gap: 40px; /* Even gap between each nav link */
+    flex: 2; /* Takes up more space to spread the links out evenly */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    gap: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-icon {
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: white;
+    background: linear-gradient(45deg, rgb(0, 119, 255), rgb(204, 0, 255), rgb(0, 255, 204));
+    background-size: 200% 200%;
+    animation: rgbHover 1.5s infinite alternate;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 82, 212, 0.4);
+}
+
+.nav-link:hover .nav-icon {
+    color: white;
+}
+
+@keyframes rgbHover {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* 🔵 AUTH BUTTONS */
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns auth buttons to the right */
+    gap: 24px; /* Even space between login and signup buttons */
+    flex: 1; /* Takes up available space on the right */
+    padding-right: 20px; /* Padding for spacing on the right */
+}
+
+.login-link, .signup-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 LOGIN */
+.login-link {
+    color: #222;
+    border: 2px solid #0077ff;
+    background: white;
+}
+
+.login-link:hover {
+    color: white;
+    background: #0077ff;
+}
+
+/* 🔥 SIGNUP */
+.signup-button {
+    background: linear-gradient(135deg, rgb(0, 119, 255), rgb(0, 72, 212));
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0, 82, 212, 0.5);
+}
+
+.signup-button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, rgb(204, 0, 255), rgb(0, 119, 255));
+    box-shadow: 0 0 12px rgba(0, 82, 212, 0.8);
+}
+
+/* 🔵 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .navbar-links {
+        gap: 30px;
+    }
+
+    .auth-buttons {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 4%;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .auth-buttons {
+        margin-top: 12px;
+        gap: 20px;
+    }
+}
